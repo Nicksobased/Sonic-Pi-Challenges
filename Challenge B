@@ -1,0 +1,93 @@
+use_bpm 170
+use_synth :saw
+
+live_loop :scratch do
+  sample :ambi_choir, beat_stretch: 8
+  sleep 8
+end
+
+live_loop :strangerthings do
+  play :c2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  
+  
+  play :c3
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  
+  play :c2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  
+  
+  play :c3
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  
+  play :c2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  
+  
+  play :c3
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  
+  play :c2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  
+  
+  play :c3
+  sleep 0.5
+  play :b2
+  sleep 0.5
+  play :g2
+  sleep 0.5
+  play :e2
+  sleep 0.5
+  sample :perc_bell2
+  sample :vinyl_scratch
+end
+
+live_loop :scrat do
+  sample :loop_electric, beat_stretch: 8
+  sleep 8
+end
+
