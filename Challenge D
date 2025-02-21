@@ -113,10 +113,15 @@ live_loop:background_notes do
   stop
 end
 
-live_loop :random do
-  sample :ambi_choir
+4.times do
+ sample :ambi_choir
   sleep 8
-end
+ end
+
+5.times do
+ sample :ambi_piano
+  sleep 8
+ end
 
 #optimize the 8 measures below with functions
 # Measure 1
@@ -186,4 +191,3 @@ sleep 1
   sleep 1
 end
 play sample :drum_cymbal_hard
-end
