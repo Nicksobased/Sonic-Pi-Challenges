@@ -1,0 +1,82 @@
+define :song do |set1, set2|
+  play set1
+  play set2
+  sleep 0.5
+end
+
+# MEASURE 1 ---------------------------
+song :a4, :a5
+
+song :a4, :a5
+
+song :c5, :c6
+
+song :a4, :a5
+
+song :d5, :d6
+
+song :a4, :a5
+
+song :e5, :e6
+
+song :d5, :d6
+
+
+# MEASURE 2 ---------------------------
+song :c5, :c6
+
+song :c5, :c6
+
+song :e5, :e6
+
+song :c5, :c6
+
+song :c5, :c6
+
+song :g5, :g6
+
+song :c4, :c5
+
+song :e5, :e6
+
+song :c4, :c5
+
+
+# MEASURE 3 ---------------------------
+
+song :g4, :g5
+
+song :g4, :g5
+
+song :b4, :b5
+
+song :b4, :b5
+
+song :g4, :g5
+
+song :c5, :c6
+
+song :g4, :g5
+
+song :d5, :d6
+
+song :c5, :c6
+
+
+# MEASURE 4 ---------------------------
+
+song :f4, :f5
+
+song :f4, :f5
+
+song :a4, :a5
+
+song :f4, :f5
+
+song :c5, :c6
+
+song :f4, :f5
+
+song :c5, :c6
+
+song :b4, :b5
