@@ -1,0 +1,107 @@
+Vocals = "C:/Users/nicolas_najarro/Desktop/HBA VOCALS.wav"
+hba = "C:/Users/nicolas_najarro/Desktop/HBA INSTRUMENTAL.wav"
+yeah = "C:/Users/nicolas_najarro/Desktop/808s.wav"
+hihats = "C:/Users/nicolas_najarro/Desktop/hihats.wav"
+snare = "C:/Users/nicolas_najarro/Desktop/snareroll.wav"
+melody = "C:/Users/nicolas_najarro/Desktop/FULL MELODY.wav"
+swamp = "C:/Users/nicolas_najarro/Documents/Audacity/GUNSWAMP.wav"
+
+print sample_duration Vocals
+
+use_bpm 140
+
+define :swamp do |sleep_time|
+  sample swamp
+  sleep sleep_time
+end
+
+swamp 2
+swamp 3
+
+x = 2
+2.times do
+  sample swamp, amp: x
+  sleep 1
+  x = x + 1
+end
+
+sleep 1
+
+live_loop :hello do
+  3.times do
+    sample hba
+    sleep 16.0024458333333335
+  end
+  stop
+end
+
+live_loop :yes do
+  3.times do
+    sample snare
+    sleep 16.0024458333333335
+  end
+  stop
+end
+
+sleep 36
+
+live_loop :melody do
+  1.times do
+    sample melody
+    sleep 48.0073375
+  end
+  stop
+end
+
+live_loop :drums1 do
+  sample hihats
+  sleep 16.0024458333333335
+end
+
+notiess = [:G4,:G4,:G4,:G4,:G4,:G4,:G4,:G4,:G4]
+sleeps = [1,5,1,1,5,1,3,5,1]
+y = 0
+
+live_loop :pianos do
+  1.times do
+    9.times do
+      play notiess[y], amp: 0.1
+      sleep(sleeps[y])
+      y = y + 1
+    end
+    y = 0
+  end
+  stop
+end
+
+noties = [:bb2,:bb2,:bb1,:D3,:D3,:D3,:G3,:G3,:G3,:G3,:G3]
+sleep = [0.5,0.3,0.2,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+x = 0
+
+live_loop :piano do
+  9.times do
+    9.times do
+      use_synth :piano
+      play noties[x], amp: 0.1
+      sleep(sleep[x])
+      x = x + 1
+    end
+    x = 0
+  end
+  stop
+end
+
+live_loop :drums2 do
+  sample yeah
+  sleep 15.999999999
+end
+
+sleep 16.0024458333333335
+sample Vocals
+
+sleep 16.0024458333333335
+
+live_loop :haha do
+  sample hba
+  sleep 16.0024458333333335
+end
